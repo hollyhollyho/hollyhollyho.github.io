@@ -1,0 +1,399 @@
+@charset "UTF-8";
+/*新的基础样式*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 整站通用样式 全站兼容标准IE8+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft Yahei;
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+q {
+  quotes: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a img {
+  border: 0;
+}
+.common {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+input::-ms-clear {
+  display: none;
+}
+/*下边三个占位符一定不能写在一起，不然会失效*/
+:-moz-placeholder {
+  color: #999999;
+}
+::-moz-placeholder {
+  color: #999999;
+}
+:-ms-input-placeholder {
+  color: #999999;
+}
+::-webkit-input-placeholder {
+  color: #999999;
+}
+:focus,
+:invalid {
+  outline: none;
+}
+textarea {
+  resize: none !important;
+}
+.clearfix {
+  clear: both !important;
+  float: none !important;
+  zoom: 1\9;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  float: none;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+/*半透明背景*/
+.black5 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.black8 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.fixed {
+  position: fixed;
+  _position: absolute;
+}
+.fixed-top {
+  position: fixed;
+  _position: absolute;
+  top: 0;
+}
+.fixed-bottom {
+  position: fixed;
+  _position: absolute;
+  bottom: 0;
+}
+/*全屏插件，为了方便横竖居中，使用表格*/
+.FullScreenPlugin {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 55555;
+}
+/*禁用*/
+.disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
+/*logo*/
+.title .logo {
+  float: left;
+}
+.title .logo img {
+  width: 180px;
+}
+.title .logo span {
+  font-size: 28px;
+  font-weight: bold;
+}
+.title form {
+  float: right;
+  border: 1px solid #ec5051;
+  margin: 32px 67px 9px 162px;
+  box-sizing: border-box;
+}
+.title form .shop-pro {
+  position: relative;
+  width: 90px;
+  height: 48px;
+  float: left;
+}
+.title form .shop-pro dt {
+  display: inline-block;
+  margin: 12px 0 12px 12px;
+  border-right: 1px solid #dbdbdb;
+  cursor: pointer;
+}
+.title form .shop-pro dd {
+  position: absolute;
+  left: -1px;
+  top: 48px;
+  width: 55.3px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ec5051;
+  border-top: 0;
+}
+.title form .shop-pro dd p {
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+}
+.title form .shop-pro dd p:hover {
+  background-color: blue;
+  color: #eee;
+}
+.title form .shop-pro i.fa-angle-down {
+  color: #666;
+  font-size: 16px;
+  margin: 0 12px 0 10px;
+}
+.title form .shop-pro.on dd {
+  display: block;
+}
+.title form input {
+  border: 0;
+  width: 257px;
+  float: left;
+  line-height: 48px;
+}
+.title form button {
+  border: 0;
+  padding: 12px 18px;
+  background: #ec5051;
+  cursor: pointer;
+  float: left;
+}
+.title form button i {
+  color: #fff;
+  font-size: 24px;
+}
+/*购物车清单*/
+.list-title {
+  border-bottom: 3px solid #aaa;
+}
+.list-title h3 {
+  float: left;
+  width: 35%;
+  line-height: 66px;
+  color: #ec5051;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.list-title h3 ins {
+  margin-left: 10px;
+  text-decoration: none;
+}
+.list-title h5 {
+  float: right;
+}
+.list-title h5 span {
+  color: #ec5051;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.list-title h5 button,
+.lis-btn-rig button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #777;
+  padding: 5px 12px;
+  border: 0;
+  margin-left: 7px;
+  cursor: pointer;
+}
+.list ul li {
+  float: left;
+  padding: 0px 5px;
+  line-height: 55px;
+}
+.list ul li.all-select {
+  padding: 0px 0px 0px 7px;
+  width: 162px;
+}
+.list ul li.all-select label {
+  cursor: pointer;
+}
+.list ul li.pro-news {
+  width: 539px;
+  padding: 0px 0px 0px 24px;
+}
+.list ul li.price,
+.list ul li.num,
+.list ul li.done {
+  padding-right: 70px;
+}
+.list ul li.total {
+  width: 90px;
+}
+.pro-list {
+  border: 1px solid #aaa;
+  border-bottom: 0;
+}
+.pro-list li {
+  border-bottom: 1px solid #ccc;
+}
+.pro-list li > * {
+  float: left;
+}
+.pro-list li input {
+  margin: 44px 5px 0 5px;
+}
+.pro-list li .pro-img {
+  width: 145px;
+}
+.pro-list li .pro-img img {
+  padding: 9px 0 9px 5px;
+  height: 80px;
+}
+.pro-list li p.pro-news {
+  padding: 0 0px 0 23px;
+  line-height: 103px;
+  width: 513px;
+}
+.pro-list li div.price {
+  margin-top: 30px;
+  width: 90px;
+  text-align: center;
+}
+.pro-list li div.price del {
+  color: #aaa;
+}
+.pro-list li div.num {
+  line-height: 100px;
+  width: 132px;
+  text-align: center;
+}
+.pro-list li div.num span {
+  padding: 2px 25px;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+.pro-list li div.num ins {
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.pro-list li div.num b {
+  margin-right: 5px;
+}
+.pro-list li pre.total {
+  width: 84px;
+  text-align: center;
+  line-height: 103px;
+}
+.pro-list li blockquote.done {
+  line-height: 103px;
+  padding-left: 38px;
+  cursor: pointer;
+}
+blockquote.lis-btn {
+  background-color: #aaa;
+  left: auto;
+  bottom: 0;
+  position: fixed;
+  width: 1200px;
+}
+.lis-btn-lef {
+  float: left;
+  line-height: 50px;
+}
+.lis-btn-lef label {
+  cursor: pointer;
+}
+.lis-btn-lef input {
+  margin-left: 10px;
+}
+.lis-btn-lef span {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.lis-btn-lef b {
+  cursor: pointer;
+  font-weight: bold;
+}
+.lis-btn-rig {
+  float: right;
+  line-height: 50px;
+}
+.lis-btn-rig span {
+  padding-right: 10px;
+}
+.lis-btn-rig b {
+  color: #ec5051;
+  font-weight: bold;
+  padding: 0 8px;
+}
+.lis-btn-rig button {
+  margin-right: 10px;
+}
+.tips-del {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: red;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 3px 30px;
+  font-size: 18px;
+  opacity: 0;
+}
+.ask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.ask .ask-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 150px;
+  background-color: #fff;
+  border: 3px solid #555;
+}
+.ask h5 {
+  float: right;
+  margin-right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.ask p {
+  padding: 40px 0 30px 20px;
+}
+.ask button {
+  padding: 5px 30px;
+  margin: 0 20px;
+  background-color: navy;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+.ask button.cancel {
+  background-color: #eee;
+  color: #000;
+  margin-left: 0px;
+}
+.ask button.confirm:hover {
+  background-color: blue;
+}
+.ask button.cancel:hover {
+  background-color: #aaa;
+  color: #fff;
+}
